@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/harrytoh1114/calculator-app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com](https://fancy-tarsier-3ea5b0.netlify.app/)
 
 ## My process
 
@@ -58,4 +58,4 @@ To see how you can add code snippets, see below:
 ```
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/harrytoh1114)
+- Frontend Mentor - [@harrytoh1114](https://www.frontendmentor.io/profile/harrytoh1114)
