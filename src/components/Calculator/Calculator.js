@@ -11,6 +11,8 @@ const Calculator = () => {
 
   const currentNumberHandler = (e) => {
     e.preventDefault();
+    console.log('test')
+    setError(false);
     total.split();
 
     setTotal(total.concat(e.target.name));
