@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 35%;
+  width: 50%;
+  max-width: 15.8rem;
 
   &__title {
     font-size: 1.4rem;
@@ -64,7 +65,7 @@
 
       &.theme-3 {
         background-color: $theme-3-key-eq;
-        
+
         &:hover {
           background-color: lighten($theme-3-key-eq, 10%);
         }

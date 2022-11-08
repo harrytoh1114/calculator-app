@@ -2,7 +2,7 @@
 
 .calculator {
   position: absolute;
-  width: 45%;
+  width: 80%;
   max-width: 45rem;
   left: 50%;
   top: 50%;
@@ -47,6 +47,25 @@
     &.theme-3 {
       background-color: $theme-3-secondary;
       color: $theme-3-text-color;
+    }
+
+    &.error {
+      outline: 1px solid red;
+      animation: 0.2s error ease-in;
+    }
+  }
+
+  @keyframes error {
+    0% {
+      transform: translateX(-2rem);
+    }
+
+    50% {
+      transform: translateX(2rem);
+    }
+
+    100% {
+      transform: translateX(0);
     }
   }
 

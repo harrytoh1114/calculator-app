@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { evaluate } from "mathjs";
 import Theme from "../Theme/Theme";
@@ -9,14 +9,11 @@ const Calculator = () => {
   const [error, setError] = useState(false);
   const theme = useSelector((state) => state.theme.theme);
 
-
   const currentNumberHandler = (e) => {
     e.preventDefault();
-    if ((total !== "" && e.target.name !== "0") || e.target.name !== "0") {
-      const t = total.split();
+    total.split();
 
-      setTotal(total.concat(e.target.name));
-    }
+    setTotal(total.concat(e.target.name));
   };
 
   const currentActionHandler = (e) => {
@@ -33,9 +30,10 @@ const Calculator = () => {
   const calcHandler = (e) => {
     e.preventDefault();
     try {
+      setError(false);
       setTotal(evaluate(total).toString());
     } catch (e) {
-      //   setTotal("Error");
+      setTotal("0");
       setError(true);
     }
   };
@@ -49,7 +47,11 @@ const Calculator = () => {
       <input
         type="text"
         value={total === "" ? "0" : total}
-        className={"calculator__total theme-" + theme}
+        className={
+          error
+            ? "calculator__total theme-" + theme + " error"
+            : "calculator__total theme-" + theme
+        }
         readOnly={true}
       />
       <div className={"calculator__key theme-" + theme}>
